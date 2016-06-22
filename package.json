@@ -1,0 +1,13 @@
+{
+  "name": "glob-hash",
+  "version": "1.0.0",
+  "main": "lib/glob-hash.js",
+  "bin": {
+    "glob-hash": "bin/glob-hash"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "glob": "^7.0.5"
+  }
+}

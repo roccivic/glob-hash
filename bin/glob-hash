@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var collect = require('../lib/collect');
+var globHash = require('../lib/glob-hash');
+var version = require('../package.json').version;
+
+var options = require('commander')
+.version(version)
+.option(
+    '-i, --include <glob>',
+    'Files to include. May be used multiple times.',
+    collect,
+    []
+)
+.option(
+    '-e, --exclude <glob>',
+    'Files to exclude. May be used multiple times.',
+    collect,
+    []
+)
+.option(
+    '-a, --algorithm <string>',
+    'Hashing algorithm to use.'
+)
+.parse(process.argv);
+
+try {
+    console.log(globHash(options));
+    process.exit(0);
+} catch (e) {
+    console.log(e.stack);
+    process.exit(1);
+}
