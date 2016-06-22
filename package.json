@@ -7,7 +7,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "async": "^2.0.0-rc.6",
     "commander": "^2.9.0",
-    "glob": "^7.0.5"
+    "glob": "^7.0.5",
+    "q": "^1.4.1"
   }
 }

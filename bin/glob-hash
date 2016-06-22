@@ -20,14 +20,18 @@ var options = require('commander')
 )
 .option(
     '-a, --algorithm <string>',
-    'Hashing algorithm to use.'
+    'Hashing algorithm to use. Defaults to "sha256".'
 )
 .parse(process.argv);
 
-try {
-    console.log(globHash(options));
-    process.exit(0);
-} catch (e) {
-    console.log(e.stack);
-    process.exit(1);
-}
+globHash(options)
+.then(
+    function(hash) {
+        console.log(hash);
+        process.exit(0);
+    },
+    function(error) {
+        console.log(error.toString());
+        process.exit(1);
+    }
+);
