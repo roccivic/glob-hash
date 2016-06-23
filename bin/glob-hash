@@ -22,6 +22,10 @@ var options = require('commander')
     '-a, --algorithm <string>',
     'Hashing algorithm to use. Defaults to "sha256".'
 )
+.option(
+    '-f, --files',
+    'Show matched files and exit.'
+)
 .parse(process.argv);
 
 globHash(options)
