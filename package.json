@@ -5,6 +5,9 @@
   "bin": {
     "glob-hash": "bin/glob-hash"
   },
+  "scripts": {
+    "test": "node test/runner"
+  },
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.0-rc.6",
