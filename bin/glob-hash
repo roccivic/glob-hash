@@ -20,7 +20,7 @@ var options = require('commander')
 )
 .option(
     '-a, --algorithm <string>',
-    'Hashing algorithm to use. Defaults to "sha256".'
+    'The hashing algorithm to use. Defaults to "sha256".'
 )
 .option(
     '-f, --files',
