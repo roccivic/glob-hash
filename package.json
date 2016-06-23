@@ -10,17 +10,17 @@
     "test": "node test/runner"
   },
   "keywords": [
-    "glob",
+    "crypto",
+    "directory",
     "files",
+    "folder",
+    "glob",
+    "hash",
+    "md5",
     "path",
     "paths",
-    "folder",
-    "directory",
-    "hash",
     "sha1",
-    "sha256",
-    "md5",
-    "crypto"
+    "sha256"
   ],
   "author": "Rouslan Placella <rouslan@placella.com> (https://github.com/roccivic)",
   "bugs": {
