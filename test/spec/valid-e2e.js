@@ -1,5 +1,7 @@
 'use strict'
 
+var path = require('path');
+
 module.exports = [{
     name: 'Should hash text files',
     result: '88ecde925da3c6f8ec3d140683da9d2a422f26c1ae1d9212da1e5a53416dcc88',
@@ -8,7 +10,10 @@ module.exports = [{
     }
 }, {
     name: 'Should find text files',
-    result: ['test/samples/bar.tst', 'test/samples/foo.tst'],
+    result: [
+        path.resolve('test/samples/bar.tst'),
+        path.resolve('test/samples/foo.tst')
+    ],
     options: {
         include: ['**/*.tst'],
         files: true
@@ -22,7 +27,9 @@ module.exports = [{
     }
 }, {
     name: 'Should exclude bar.tst from list of files',
-    result: ['test/samples/foo.tst'],
+    result: [
+        path.resolve('test/samples/foo.tst')
+    ],
     options: {
         include: ['**/*.tst'],
         exclude: ['**/bar.tst'],
