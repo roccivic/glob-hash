@@ -1,6 +1,7 @@
 {
   "name": "glob-hash",
   "version": "1.0.0",
+  "description": "npm module to hash the contents of files matched by globs",
   "main": "lib/glob-hash.js",
   "bin": {
     "glob-hash": "bin/glob-hash"
@@ -8,7 +9,29 @@
   "scripts": {
     "test": "node test/runner"
   },
+  "keywords": [
+    "glob",
+    "files",
+    "path",
+    "paths",
+    "folder",
+    "directory",
+    "hash",
+    "sha1",
+    "sha256",
+    "md5",
+    "`ypto"
+  ],
+  "author": "Rouslan Placella <rouslan@placella.com> (https://github.com/roccivic)",
+  "bugs": {
+    "url": "https://github.com/roccivic/glob-hash/issues"
+  },
+  "homepage": "https://github.com/roccivic/glob-hash#readme",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roccivic/glob-hash.git"
+  },
   "dependencies": {
     "async": "^2.0.0-rc.6",
     "commander": "^2.9.0",
