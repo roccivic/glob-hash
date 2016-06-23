@@ -20,7 +20,7 @@
     "sha1",
     "sha256",
     "md5",
-    "`ypto"
+    "crypto"
   ],
   "author": "Rouslan Placella <rouslan@placella.com> (https://github.com/roccivic)",
   "bugs": {
