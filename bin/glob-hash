@@ -30,8 +30,12 @@ var options = require('commander')
 
 globHash(options)
 .then(
-    function(hash) {
-        console.log(hash);
+    function(result) {
+        if (Array.isArray(result)) {
+            console.log(result.join('\n'));
+        } else {
+            console.log(result.toString());
+        }
         process.exit(0);
     },
     function(error) {

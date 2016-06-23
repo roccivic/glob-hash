@@ -9,7 +9,7 @@ for (var i = 0; i < validTests.length; i++) {
     (function(test){
         globHash(test.options)
         .then(function(hash) {
-            var foo = assert.equal(
+            var foo = assert.deepEqual(
                 hash,
                 test.result,
                 test.name

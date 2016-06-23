@@ -8,7 +8,7 @@ module.exports = [{
     }
 }, {
     name: 'Should find text files',
-    result: 'test/samples/bar.tst\ntest/samples/foo.tst',
+    result: ['test/samples/bar.tst', 'test/samples/foo.tst'],
     options: {
         include: ['**/*.tst'],
         files: true
@@ -22,7 +22,7 @@ module.exports = [{
     }
 }, {
     name: 'Should exclude bar.tst from list of files',
-    result: 'test/samples/foo.tst',
+    result: ['test/samples/foo.tst'],
     options: {
         include: ['**/*.tst'],
         exclude: ['**/bar.tst'],
