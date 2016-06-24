@@ -26,6 +26,7 @@ Note: option ```-i/--include``` is mandatory
     -e, --exclude [glob]      Files to exclude. May be used multiple times.
     -a, --algorithm [string]  The hashing algorithm to use. Defaults to "sha256".
     -f, --files               Show matched files and exit.
+    -j, --jail [path]         A jail path. Reading outside the jail path will throw an error.
 
 # Via API
 
@@ -55,6 +56,8 @@ globHash(options)
 *String* **algorithm** - The hashing algorithms to use. Defaults to **"sha256"**, see [crypto.getHashes](https://nodejs.org/api/crypto.html#crypto_crypto_gethashes).
 
 *Boolean* **files** - Returns an array of files matched by the globs, instead of returning the hash.
+
+*String* **jail** - A jail path. Reading outside the jail path will throw an error. Defaults to never throwing.
 
 ### More samples
 ```js

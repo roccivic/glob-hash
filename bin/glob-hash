@@ -26,6 +26,10 @@ var options = require('commander')
     '-f, --files',
     'Show matched files and exit.'
 )
+.option(
+    '-j, --jail [path]',
+    'A jail path. Reading outside the jail path will throw an error.'
+)
 .parse(process.argv);
 
 globHash(options)

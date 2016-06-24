@@ -44,6 +44,14 @@ var tests = [{
         include: ['**/*.tst'],
         algorithm: 'md5'
     }
+}, {
+    name: 'Should work with a jail path',
+    result: '96948aad3fcae80c08a35c9b5958cd89',
+    options: {
+        include: ['**/*.tst'],
+        algorithm: 'md5',
+        jail: '.'
+    }
 }];
 
 for (var i = 0; i < tests.length; i++) {

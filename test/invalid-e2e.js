@@ -32,6 +32,20 @@ var tests = [{
         include: ['foobar'],
         exclude: ['foobar']
     }
+}, {
+    name: 'Read outside jail',
+    error: 'Attemp to read outside the permitted path.',
+    options: {
+        include: ['test/*'],
+        jail: 'test/samples'
+    }
+}, {
+    name: 'Invalid jail path.',
+    error: 'Invalid jail path.',
+    options: {
+        include: ['test/*'],
+        jail: true
+    }
 }];
 
 for (var i = 0; i < tests.length; i++) {
