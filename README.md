@@ -22,9 +22,9 @@ Note: option ```-i/--include``` is mandatory
 
     -h, --help                output usage information
     -V, --version             output the version number
-    -i, --include <glob>      Files to include. May be used multiple times.
-    -e, --exclude <glob>      Files to exclude. May be used multiple times.
-    -a, --algorithm <string>  Hashing algorithm to use. Defaults to "sha256".
+    -i, --include <glob>      Files to include. Mandatory. May be used multiple times.
+    -e, --exclude [glob]      Files to exclude. May be used multiple times.
+    -a, --algorithm [string]  The hashing algorithm to use. Defaults to "sha256".
     -f, --files               Show matched files and exit.
 
 # Via API

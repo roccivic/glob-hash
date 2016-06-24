@@ -8,18 +8,18 @@ var options = require('commander')
 .version(version)
 .option(
     '-i, --include <glob>',
-    'Files to include. May be used multiple times.',
+    'Files to include. Mandatory. May be used multiple times.',
     collect,
     []
 )
 .option(
-    '-e, --exclude <glob>',
+    '-e, --exclude [glob]',
     'Files to exclude. May be used multiple times.',
     collect,
     []
 )
 .option(
-    '-a, --algorithm <string>',
+    '-a, --algorithm [string]',
     'The hashing algorithm to use. Defaults to "sha256".'
 )
 .option(
