@@ -1,8 +1,10 @@
 'use strict'
 
 var path = require('path');
+var tap = require('tap');
+var globHash = require('../');
 
-module.exports = [{
+var tests = [{
     name: 'Should hash text files',
     result: '88ecde925da3c6f8ec3d140683da9d2a422f26c1ae1d9212da1e5a53416dcc88',
     options: {
@@ -43,3 +45,18 @@ module.exports = [{
         algorithm: 'md5'
     }
 }];
+
+for (var i = 0; i < tests.length; i++) {
+    (function(test) {
+        tap.test(test.name, function(childTest) {
+          globHash(test.options)
+          .then(function(result) {
+            childTest.deepEqual(result, test.result);
+            childTest.end();
+          }, function(error) {
+            childTest.fail(error);
+            childTest.end();
+          });
+        });
+    }(tests[i]));
+}

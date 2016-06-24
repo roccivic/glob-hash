@@ -7,7 +7,7 @@
     "glob-hash": "bin/glob-hash"
   },
   "scripts": {
-    "test": "node test/runner"
+    "test": "node test/valid-e2e.js"
   },
   "keywords": [
     "crypto",
@@ -37,5 +37,8 @@
     "commander": "^2.9.0",
     "glob": "^7.0.5",
     "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "tap": "^5.8.0"
   }
 }
