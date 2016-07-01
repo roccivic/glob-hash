@@ -11,6 +11,12 @@ var tests = [{
         include: ['**/*.tst']
     }
 }, {
+    name: 'Should ignore duplicates',
+    result: '88ecde925da3c6f8ec3d140683da9d2a422f26c1ae1d9212da1e5a53416dcc88',
+    options: {
+        include: ['**/*.tst', '**/foo.tst', '**/bar.tst']
+    }
+}, {
     name: 'Should find text files',
     result: [
         path.resolve('test/samples/bar.tst'),
