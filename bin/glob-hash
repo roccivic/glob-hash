@@ -30,6 +30,11 @@ var options = require('commander')
     '-j, --jail [path]',
     'A jail path. Reading outside the jail path will throw an error.'
 )
+// add filenames to hash
+.option(
+    '-n, --filenames',
+    'Include filenames in the hash.'
+)
 .parse(process.argv);
 
 globHash(options)

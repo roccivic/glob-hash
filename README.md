@@ -27,6 +27,7 @@ Note: option ```-i/--include``` is mandatory
     -a, --algorithm [string]  The hashing algorithm to use. Defaults to "sha256".
     -f, --files               Show matched files and exit.
     -j, --jail [path]         A jail path. Reading outside the jail path will throw an error.
+    -n, --filenames           Include filenames in the hash.
 
 # Via API
 
@@ -58,6 +59,8 @@ globHash(options)
 *Boolean* **files** - Returns an array of files matched by the globs, instead of returning the hash.
 
 *String* **jail** - A jail path. Reading outside the jail path will throw an error. Defaults to never throwing.
+
+*Boolean* **filenames** - Include filename in the file hash. If used in combination with jail path, filename includes relative path from jail, otherwise it includes full path.
 
 ### More samples
 ```js
