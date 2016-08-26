@@ -58,6 +58,14 @@ var tests = [{
         algorithm: 'md5',
         jail: '.'
     }
+}, {
+    name: 'Should hash text files including filenames with jail path',
+    result: '2aaea5813468828d7bb64d9c9a83f4ec4fae6cabccba6c733201fd2fa6e85b25',
+    options: {
+        include: ['**/*.tst'],
+        filenames: true,
+        jail: '.'
+    }
 }];
 
 for (var i = 0; i < tests.length; i++) {
