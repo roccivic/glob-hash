@@ -59,6 +59,18 @@ var tests = [{
         jail: '.'
     }
 }, {
+    name: 'Should find text files with relative path to jail',
+    result: [
+        'samples/bar.tst',
+        'samples/foo.tst'
+    ],
+    options: {
+        include: ['**/*.tst'],
+        algorithm: 'md5',
+        files: true,
+        jail: './test'
+    }
+}, {
     name: 'Should hash text files including filenames with jail path',
     result: '2aaea5813468828d7bb64d9c9a83f4ec4fae6cabccba6c733201fd2fa6e85b25',
     options: {
