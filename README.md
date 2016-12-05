@@ -4,6 +4,7 @@ npm module to hash the contents of files matched by globs
 [![MIT License Badge](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/roccivic/glob-hash/blob/master/LICENSE.txt)
 [![npm](https://img.shields.io/npm/v/glob-hash.svg)](https://www.npmjs.com/package/glob-hash)
 [![Build Status](https://travis-ci.org/roccivic/glob-hash.svg?branch=master)](https://travis-ci.org/roccivic/glob-hash)
+[![Build status](https://ci.appveyor.com/api/projects/status/22b1tjoqm0yksnqb/branch/master?svg=true)](https://ci.appveyor.com/project/roccivic/glob-hash/branch/master)
 [![Code Climate](https://codeclimate.com/github/roccivic/glob-hash/badges/gpa.svg)](https://codeclimate.com/github/roccivic/glob-hash)
 
 # Via Command line
