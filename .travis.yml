@@ -1,4 +1,8 @@
 language: node_js
 node_js:
-  - "node"
-  - "iojs"
+  - node
+  - iojs
+env:
+  global:
+    - secure: >-
+        I2uzkm+d720DCwZUuHMSwYiM6JXnkFp9Wzgyy8lGg/xmyk5dIV94myKL7W4ba8Smo9lx178riAvqd8GAi/QNp10DJUfl/HbH3YNWmflt52SCg1aqaRP2v/S8uRO++z+37ra7vg45EiI/t1r7DF2umMQ1Zs4C4rZoQSQir1BjMewep4o6vXyIzvmLlnCTj/k3Amy+UGOL6JBg5D7eeDMq+8RwRd6latIJJX1gphX2rO7yiPPtFbDbs8LrzgagcokQlKt70NqvW4Bt/Wl2/yOT3bHEOmNscEY4/tKPiPmeOF7v0Wq/hXx3DFNiLJ46XYcR4+vhGJIq82OC6D4We1kgBZ4fpfNVlSw50LNMKUi7Y4jYXCUl0y9YmgaWqqowSQJ1wsXmn/w6U1sTa+d7YPA1LaArN8z6wppA18UUfpRi5n4cZxlt6No1cJxXmZCDkv+cpmniXssZIcJo20fEJdOtNA0DzSFflCMH3iYwfjcfU24knnRp7X4iQHf4JovDkTQR1E8Vl8i7hRIAKUqXsNw31BxfjT5kNluUPjUSE9fsPoCiFDKnZqFYfBuUHdyp5XHzHtHLB6HwqzbKY9pFZilGY6LTG48XQMWf58hbbc62odOULQ8d33eciRbZBnuGEqsmnXOZ6dnAvDzHRy/yg2vXFMOq3bKAU/HU6GPlb50spoA=

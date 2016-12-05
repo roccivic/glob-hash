@@ -7,7 +7,7 @@
     "glob-hash": "bin/glob-hash"
   },
   "scripts": {
-    "test": "node ./node_modules/tap/bin/run.js test/*.js"
+    "test": "node ./node_modules/tap/bin/run.js --cov test/*.js"
   },
   "keywords": [
     "crypto",
