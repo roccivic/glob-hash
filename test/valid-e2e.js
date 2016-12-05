@@ -1,6 +1,6 @@
 'use strict'
 
-var path = require('path');
+var normalise = require('../lib/normalise');
 var tap = require('tap');
 var globHash = require('../');
 
@@ -19,8 +19,8 @@ var tests = [{
 }, {
     name: 'Should find text files',
     result: [
-        path.resolve('test/samples/bar.tst'),
-        path.resolve('test/samples/foo.tst')
+        normalise('test/samples/bar.tst'),
+        normalise('test/samples/foo.tst')
     ],
     options: {
         include: ['**/*.tst'],
@@ -36,7 +36,7 @@ var tests = [{
 }, {
     name: 'Should exclude bar.tst from list of files',
     result: [
-        path.resolve('test/samples/foo.tst')
+        normalise('test/samples/foo.tst')
     ],
     options: {
         include: ['**/*.tst'],
