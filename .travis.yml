@@ -1,4 +1,24 @@
 language: node_js
+
 node_js:
   - "node"
   - "iojs"
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "nbgUIqb1Juss43pRZKHfPe4+fXXSbEjn0Z0AshFrZ8t69ECSl/0UIzQyDf5jN41JEYevvJcKAf/eNdzU+6KZXpwEGi1BFNkGdc0hwh8DlervQt4/UfQ+3Z8OCgC3FaX7ybqMaMN94OqilJiJn7gOo+NR0B/qPaTQI8jAYDvSeDZ9yKjKRqvc6Cz/14bx7Kb2qBLHgJat5yPUaR48mt0Il3+Es4PA6cVcAxjoLbTKBjY21LqmKWv1Ds9K/VAwgLnVweVGVx3rfNCg4Gkhj5CtFS8UVw0Kc3qQ6nLQznrrOoBhZ+emZomodAj8tZwQJ2o+xyKpl4uJbVS8DZAi9fPF628Zb1UiHMkFxXb5MhvzSJoce4uF+KYgp4jzYf4NijjXjyI5AarhMvJmuDq/KKyoeLeElVnyXKOWPC61oQwwlqGsWIMz6bHrjBOKyjtf6w14dtrqRG9vcJjo+kZWZuMnsU+NTY48Ok42yJYEzmcBC0arcxUJ7XkEQPajB6ZI+nce+wLdeF4x//k93MmuCt7ZMdNyiFmiVbez0RCI8xymljT4OXs3Zhp1L0LqEOGHN7uiwcGs7ncf+DLu7FrOG/2Iud0/iKDHcBvgvhIlnjBf9+mN7o+KRgg9fXUAc0gBJfQV7R29epkyrowBVq/Qi+iNpySgFSoKYNW3puuapGrM2z0="
+
+before_install:
+      - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+
+addons:
+  coverity_scan:
+    project:
+      name: "roccivic/glob-hash"
+      description: "glob-hash"
+    notification_email: rouslan@placella.com
+    build_command_prepend: ""
+    build_command: "--no-command --fs-capture-search ./lib/ ./bin/"
+    branch_pattern: coverity
