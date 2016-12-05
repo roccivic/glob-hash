@@ -78,6 +78,18 @@ var tests = [{
         filenames: true,
         jail: '.'
     }
+}, {
+    name: 'Should exclude paths that are not files',
+    result: [
+        'samples/bar.tst',
+        'samples/foo.tst',
+        'samples/subfolder/empty.txt'
+    ],
+    options: {
+        include: ['test/samples/**/*'],
+        files: true,
+        jail: './test'
+    }
 }];
 
 for (var i = 0; i < tests.length; i++) {
