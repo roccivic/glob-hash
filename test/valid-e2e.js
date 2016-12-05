@@ -8,13 +8,13 @@ var tests = [{
     name: 'Should hash text files',
     result: '88ecde925da3c6f8ec3d140683da9d2a422f26c1ae1d9212da1e5a53416dcc88',
     options: {
-        include: ['**/*.tst']
+        include: ['test/**/*.tst']
     }
 }, {
     name: 'Should ignore duplicates',
     result: '88ecde925da3c6f8ec3d140683da9d2a422f26c1ae1d9212da1e5a53416dcc88',
     options: {
-        include: ['**/*.tst', '**/foo.tst', '**/bar.tst']
+        include: ['test/**/*.tst', 'test/**/foo.tst', 'test/**/bar.tst']
     }
 }, {
     name: 'Should find text files',
@@ -23,15 +23,15 @@ var tests = [{
         normalise('test/samples/foo.tst')
     ],
     options: {
-        include: ['**/*.tst'],
+        include: ['test/**/*.tst'],
         files: true
     }
 }, {
     name: 'Should exclude bar.tst from hash',
     result: '2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae',
     options: {
-        include: ['**/*.tst'],
-        exclude: ['**/bar.tst']
+        include: ['test/**/*.tst'],
+        exclude: ['test/**/bar.tst']
     }
 }, {
     name: 'Should exclude bar.tst from list of files',
@@ -39,22 +39,22 @@ var tests = [{
         normalise('test/samples/foo.tst')
     ],
     options: {
-        include: ['**/*.tst'],
-        exclude: ['**/bar.tst'],
+        include: ['test/**/*.tst'],
+        exclude: ['test/**/bar.tst'],
         files: true
     }
 }, {
     name: 'Should use MD5 for hashing',
     result: '96948aad3fcae80c08a35c9b5958cd89',
     options: {
-        include: ['**/*.tst'],
+        include: ['test/**/*.tst'],
         algorithm: 'md5'
     }
 }, {
     name: 'Should work with a jail path',
     result: '96948aad3fcae80c08a35c9b5958cd89',
     options: {
-        include: ['**/*.tst'],
+        include: ['test/**/*.tst'],
         algorithm: 'md5',
         jail: '.'
     }
@@ -65,7 +65,7 @@ var tests = [{
         'samples/foo.tst'
     ],
     options: {
-        include: ['**/*.tst'],
+        include: ['test/**/*.tst'],
         algorithm: 'md5',
         files: true,
         jail: './test'
@@ -74,7 +74,7 @@ var tests = [{
     name: 'Should hash text files including filenames with jail path',
     result: '2aaea5813468828d7bb64d9c9a83f4ec4fae6cabccba6c733201fd2fa6e85b25',
     options: {
-        include: ['**/*.tst'],
+        include: ['test/**/*.tst'],
         filenames: true,
         jail: '.'
     }
